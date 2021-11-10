@@ -1,0 +1,78 @@
+#header{
+display: flex;
+margin-top: 0em;
+background:#36515c;
+width: 100%;
+height: 4em;
+justify-content: center;
+align-items: center;
+max-width: 100%;
+opacity: 1;
+}
+
+#name_site{
+margin-left: 2em;
+margin-top: 0.6em;
+font-size: 2.5em;
+color: #01758ffe;
+font-family: 'Alegreya', serif;
+-webkit-text-stroke: .02em #161b29;
+}
+
+#body{
+display: flex;
+color: red;
+width: 100%;
+height: 100%;
+margin-top: -1em;
+}
+.authenticate{
+display: flex;
+width=20%;
+margin-top: 4em;
+margin-left: 35em;
+}
+
+body{
+background-color: silver;
+width: 100%;
+}
+
+#check{
+border: 0.1em solid silver;
+overflow: auto;
+position: relative;
+line-height: 1em;
+top: 3em;
+left: 15em;
+height: 19em;
+width: 45em;
+text-align: center;
+padding: 0.5em;
+}
+
+#url_short{
+position: relative;
+line-height: 1em;
+top: 3em;
+left: 17em;
+height: 5em;
+width: 45em;
+text-align: center;
+margin-bottom: 5em;
+}
+
+#head{
+left: 32em;
+top: 3em;
+position: relative;
+}
+#head2{
+top: 0.5em;
+position: relative;
+}
+
+#exit{
+position: relative;
+left: 20em;
+}

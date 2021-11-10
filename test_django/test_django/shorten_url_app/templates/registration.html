@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block shorten_url %}
+
+<div class="authenticate">
+    <form  method="post">
+        {{ user_form|crispy }}
+        {% csrf_token %}
+        <input class="btn btn-dark" type="submit" value="Зарегистрироваться">
+    </form>
+</div>
+
+{% endblock %}
+

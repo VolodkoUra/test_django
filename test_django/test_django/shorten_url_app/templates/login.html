@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block registration %}
+<div class="authenticate">
+    <form action="{% url 'user_login' %}" method="post">
+        {{ form|crispy }}
+        {% csrf_token %}
+
+        <input type="hidden" name="next" value="{{ next }}"/>
+        <p><input type="submit" class="btn btn-dark" value="Войти"></p>
+    </form>
+</div>
+
+
+{% endblock %}
+
+
+{% block shorten_url %}
+{% endblock %}

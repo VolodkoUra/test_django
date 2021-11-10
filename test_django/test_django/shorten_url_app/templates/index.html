@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block exit %}
+<div id="exit">
+    <a class="btn btn-danger" href="{% url 'logout' %}">Выход</a>
+</div>
+
+{% endblock %}
+
+{% block shorten_url %}
+<div>
+    <div id="url_short">
+        <form action="." method="post" >
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input class="btn btn-dark" type="submit" name="submit" value="Сократить"/>
+        </form>
+        {% if massege %}
+            {{massege}}
+        {% endif %}
+        <p id="head2">Короткий адрес: </p><a href="{{url_short}}">{{ url_short }}</a><br><hr>
+    </div>
+    <p id="head">Все доступные ссылки: </p>
+    <div id="check">
+        {% if urls %}
+
+            {% for i in urls %}
+                <a href="{{i.url_long}}">{{i.url_long}}</a> : <a href="{{i.url_short}}">{{i.url_short}}</a>
+                <hr>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+
+<br/>
+
+{% endblock %}
+
+
+
+
